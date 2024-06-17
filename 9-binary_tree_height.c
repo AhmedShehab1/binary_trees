@@ -11,7 +11,7 @@
 size_t height_from_right(const binary_tree_t *tree)
 {
 	binary_tree_t *curr_tree = tree->right;
-	int height = 0;
+	size_t height = 0;
 
 	while (curr_tree != NULL)
 	{
@@ -32,7 +32,7 @@ size_t height_from_right(const binary_tree_t *tree)
 size_t height_from_left(const binary_tree_t *tree)
 {
 	binary_tree_t *curr_tree = tree->left;
-	int height = 0;
+	size_t height = 0;
 
 	while (curr_tree != NULL)
 	{
