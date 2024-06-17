@@ -1,5 +1,0 @@
-#!/usr/bin/bash
-git config --global user.name "AhmedShehab1"; git config --global user.email "legendbtw2003@gmail.com"
-git add .
-git commit -m $1
-git push
