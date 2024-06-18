@@ -8,9 +8,9 @@
  * Return: The level
  */
 
-size_t binary_tree_level(const binary_tree_t *tree)
+int binary_tree_level(const binary_tree_t *tree)
 {
-	size_t r_level, l_level;
+	int r_level, l_level;
 
 	if (tree == NULL)
 		return (-1);
@@ -30,9 +30,9 @@ size_t binary_tree_level(const binary_tree_t *tree)
  * Return: The balance
  */
 
-size_t binary_tree_balance(const binary_tree_t *tree)
+int binary_tree_balance(const binary_tree_t *tree)
 {
-	size_t r_height, l_height;
+	int r_height, l_height;
 
 	if (tree == NULL)
 		return (0);
