@@ -40,8 +40,8 @@ size_t binary_tree_nodes(const binary_tree_t *tree)
 	if (tree->right == NULL && tree->left == NULL)
 		return (0);
 
-	r_nodes = tree->right == NULL ? 0 : 1 + travel(tree->right);
-	l_nodes = tree->left == NULL ? 0 : 1 + travel(tree->left);
+	r_nodes = tree->right == NULL ? 0 : 1 + travel_until_leaves(tree->right);
+	l_nodes = tree->left == NULL ? 0 : 1 + travel_until_leaves(tree->left);
 
 	return (r_nodes + l_nodes + rootNode);
 }
