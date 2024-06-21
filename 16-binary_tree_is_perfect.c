@@ -30,7 +30,7 @@ int getDepth(const binary_tree_t *root)
 int isPerfect(const binary_tree_t *root, int d, int level)
 {
 	if (root == NULL)
-		return (1);
+		return (0);
 
 	if (root->left == NULL && root->right == NULL)
 	{
