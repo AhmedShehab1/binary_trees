@@ -47,17 +47,17 @@ void enqueue(Queue_t *queue, binary_tree_t *node)
 */
 binary_tree_t *dequeue(Queue_t *queue)
 {
+	QueueNode_t *temp = queue->front;
+	binary_tree_t *node = temp->node;
+    
 	if (queue->front == NULL)
 	return (NULL);
-
-	QueueNode_t *temp = queue->front;
 
 	queue->front = queue->front->next;
 
 	if (queue->front == NULL)
 	queue->rear = NULL;
 
-	binary_tree_t *node = temp->node;
 
 	free(temp);
 	return (node);
