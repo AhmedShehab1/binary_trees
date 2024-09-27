@@ -103,4 +103,6 @@ void binary_tree_levelorder(binary_tree_t *tree, void (*func)(int))
 		if (node->right)
 		enqueue(queue, node->right);
 	}
+
+    free(queue);
 }
