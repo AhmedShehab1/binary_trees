@@ -49,7 +49,42 @@ size_t binary_tree_leaves(const binary_tree_t *tree);
 size_t binary_tree_nodes(const binary_tree_t *tree);
 int binary_tree_balance(const binary_tree_t *tree);
 
+/**
+ * QueueNode_s - queue node
+ *
+ * @next: pointer to the next queue node
+ * @node: binary tree node
+ *
+*/
+struct QueueNode_s
+{
+	struct QueueNode_s *next;
+	binary_tree_t *node;
+};
 
+typedef struct QueueNode_s QueueNode_t;
+
+/**
+ * Queue_s - queue
+ *
+ * @front: pointer to the front queue node
+ * @rear: pointer to the end queue node
+ *
+*/
+struct Queue_s
+{
+	QueueNode_t *front;
+	QueueNode_t *rear;
+};
+
+typedef struct Queue_s Queue_t;
+
+Queue_t *createQueue();
+void enqueue(Queue_t *queue, binary_tree_t *node);
+binary_tree_t *dequeue(Queue_t *queue);
+int isEmpty(Queue_t *queue);
+
+void binary_tree_levelorder(binary_tree_t *tree, void (*func)(int));
 int binary_tree_is_full(const binary_tree_t *tree);
 int binary_tree_is_perfect(const binary_tree_t *tree);
 binary_tree_t *binary_tree_uncle(binary_tree_t *node);
